@@ -4,11 +4,13 @@ const msg = document.querySelector("#msg")
 form.addEventListener('submit', e => {
     e.preventDefault()
     fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-        .then(response => {msg.innerHTML = "Thank You For sign up..."
-    setTimeout(function () {
-        msg.innerHTML = ""
-    }, 5000)
-    form.reset();
+        .then(response => {
+            msg.innerHTML = "Thank You For sign up..."
+            setTimeout(function () {
+                msg.innerHTML = ""
+            }, 5000)
+            form.reset();
+        }
+    )
+
 })
-    .catch(error => console.error('Error!', error.message))
-  })

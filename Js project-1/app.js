@@ -85,7 +85,7 @@ const checkWinner = () => {
         return true;
       }
     }
-    one.innerHTML= "points"
+
   }
 };
 
